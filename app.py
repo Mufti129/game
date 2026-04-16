@@ -31,17 +31,26 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # --- FUNGSI HELPER ---
+#def load_lottie(url):
+ #   r = requests.get(url)
+  #  return r.json() if r.status_code == 200 else None
 def load_lottie(url):
-    r = requests.get(url)
-    return r.json() if r.status_code == 200 else None
-
+    try:
+        r = requests.get(url, timeout=5)
+        if r.status_code == 200:
+            return r.json()
+        return None
+    except:
+        return None
 def wa_share(pesan):
     url = f"https://wa.me{urllib.parse.quote(pesan)}"
     st.markdown(f'<a href="{url}" target="_blank" class="share-btn">📲 Share Hasil ke WhatsApp</a>', unsafe_allow_html=True)
 
 # --- LOAD ASSETS ---
-lottie_main = load_lottie("https://lottiefiles.com")
-
+#lottie_main = load_lottie("https://lottiefiles.com")
+lottie_main = load_lottie(
+    "https://assets10.lottiefiles.com/packages/lf20_ktwnwv5m.json"
+)
 # --- SIDEBAR ---
 with st.sidebar:
     st.title("🌌 Menu Oracle")
@@ -55,6 +64,10 @@ if menu == "Beranda":
     st.title("🔮 Oracle Advanced")
     st.subheader("Temukan rahasia masa depanmu dengan teknologi AI Gaib.")
     st_lottie(lottie_main, height=300)
+    if lottie_main:
+    st_lottie(lottie_main, height=300)
+    else:
+    st.warning("Animasi gagal dimuat 🔄")
     st.info("Pilih salah satu menu di samping untuk memulai petualanganmu!")
 
 elif menu == "Cek Khodam Pro":
