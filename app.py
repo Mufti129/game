@@ -6,7 +6,7 @@ import urllib.parse
 from streamlit_lottie import st_lottie
 
 # --- KONFIGURASI HALAMAN ---
-st.set_page_config(page_title="Oracle Pro: Ramalan & Khodam", page_icon="🔮", layout="centered")
+st.set_page_config(page_title="NASYA GAME : Ramalan & Khodam", page_icon="🔮", layout="centered")
 
 # --- CUSTOM CSS (Bikin tampilan kayak aplikasi premium) ---
 st.markdown("""
