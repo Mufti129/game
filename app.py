@@ -56,7 +56,7 @@ with st.sidebar:
     st.title("Menu Nasya Game")
     menu = st.radio("Pilih Ramalan:", ["Beranda", "Cek Khodam Pro", "Love Compatibility", "Job Future"])
     st.markdown("---")
-    st.write("Developed by [Nama Kamu]")
+    st.write("Developed by Nasya")
 
 # --- LOGIKA GAME ---
 
