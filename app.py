@@ -63,11 +63,11 @@ with st.sidebar:
 if menu == "Beranda":
     st.title("🔮 Oracle Advanced")
     st.subheader("Temukan rahasia masa depanmu dengan teknologi AI Gaib.")
-    st_lottie(lottie_main, height=300)
+    #st_lottie(lottie_main, height=300)
     if lottie_main:
-    st_lottie(lottie_main, height=300)
+        st_lottie(lottie_main, height=300)
     else:
-    st.warning("Animasi gagal dimuat 🔄")
+        st.warning("Animasi gagal dimuat 🔄")
     st.info("Pilih salah satu menu di samping untuk memulai petualanganmu!")
 
 elif menu == "Cek Khodam Pro":
