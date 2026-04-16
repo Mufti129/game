@@ -53,7 +53,7 @@ lottie_main = load_lottie(
 )
 # --- SIDEBAR ---
 with st.sidebar:
-    st.title("🌌 Menu Oracle")
+    st.title("Menu Nasya Game")
     menu = st.radio("Pilih Ramalan:", ["Beranda", "Cek Khodam Pro", "Love Compatibility", "Job Future"])
     st.markdown("---")
     st.write("Developed by [Nama Kamu]")
@@ -61,7 +61,7 @@ with st.sidebar:
 # --- LOGIKA GAME ---
 
 if menu == "Beranda":
-    st.title("🔮 Oracle Advanced")
+    st.title("Nasya Game")
     st.subheader("Temukan rahasia masa depanmu dengan teknologi AI Gaib.")
     #st_lottie(lottie_main, height=300)
     if lottie_main:
@@ -98,7 +98,7 @@ elif menu == "Cek Khodam Pro":
             st.warning("Namanya diisi dulu bosku!")
 
 elif menu == "Love Compatibility":
-    st.header("❤️ Love Meter v2.0")
+    st.header("❤️ Love Meter ")
     col1, col2 = st.columns(2)
     n1 = col1.text_input("Nama Kamu")
     n2 = col2.text_input("Nama Dia")
